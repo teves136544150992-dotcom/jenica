@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Life on Land</title>
+  <style>
+    :root{
+      --accent-green: #2c8a4d; /* titles color */
+      --bg: #f7faf7;
+      --card: #ffffff;
+      --muted: #55606b;
+      --max-width: 1000px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{height:100%;margin:0;background:var(--bg);color:#0b1220}
+    .container{max-width:var(--max-width);margin:0 auto;padding:24px}
+
+    /* Make all titles green */
+    h1,h2,h3,h4,h5,h6{color:var(--accent-green);margin:0 0 12px 0}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,var(--accent-green),#6ecf8b);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav{display:flex;gap:14px}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;margin:18px 0}
+    .hero .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .hero img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    p{line-height:1.6;color:#23303a}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+
+    footer{margin-top:28px;padding:18px 0;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">LL</div>
+        <div>
+          <div style="font-weight:800;font-size:18px;color:var(--accent-green)">Life on Land</div>
+          <div style="font-size:13px;color:var(--muted)">Protecting biodiversity & habitats</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#threats">Threats</a>
+        <a href="#actions">How to Help</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>Life on Land</h1>
+        <p>
+          "Life on Land" focuses on the protection, restoration, and sustainable use of terrestrial ecosystems — forests, wetlands, drylands, and mountains. Healthy land sustains biodiversity, supports agriculture, stores carbon, and provides water and livelihoods for millions.
+        </p>
+
+        <h2 id="about">Why it matters</h2>
+        <p>
+          Terrestrial ecosystems provide essential services: pollination, soil fertility, water regulation, and climate moderation. Conserving land helps fight climate change and preserves species and cultural heritage.
+        </p>
+
+        <h2 id="threats">Main threats</h2>
+        <ul>
+          <li>Deforestation and habitat loss</li>
+          <li>Overexploitation of natural resources</li>
+          <li>Invasive species and biodiversity decline</li>
+          <li>Climate change and desertification</li>
+        </ul>
+      </div>
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80&auto=format&fit=crop" alt="Forest landscape">
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Conservation actions</h2>
+        <p>
+          Practical steps include protecting remaining natural habitats, restoring degraded land, promoting sustainable agriculture, and supporting community-based conservation. Policies, local leadership, and finance are all needed to scale impact.
+        </p>
+        <h3>Examples</h3>
+        <p>
+          Reforestation projects, protected area expansion, agroforestry, and invasive-species control have all shown positive results when designed with local communities.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2 id="actions">How you can help</h2>
+        <ol>
+          <li>Support organizations working on land restoration.</li>
+          <li>Choose sustainable products (timber, palm oil, paper).</li>
+          <li>Participate in local tree-planting and clean-up events.</li>
+          <li>Reduce food waste and choose diverse diets to lower pressure on land.</li>
+        </ol>
+      </article>
+    </section>
+
+    
